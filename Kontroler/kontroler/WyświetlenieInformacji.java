@@ -1,10 +1,9 @@
 package Kontroler.kontroler;
 
-public class WyświetlenieInformacji {
+public abstract class WyświetlenieInformacji {
 
-	public String[] wyświetlenieInformacji(String[] daneDoWyświetlenia) {
-		// TODO - implement WyświetlenieInformacji.wyświetlenieInformacji
-		throw new UnsupportedOperationException();
+	public void wyświetlenieInformacji(String daneDoWyświetlenia) {
+		System.out.println("Wyświetlenie Informacji: "+daneDoWyświetlenia);
 	}
 
 }

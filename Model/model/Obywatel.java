@@ -30,12 +30,12 @@ public class Obywatel implements IObywatel {
 
 	@Override
 	public String dajDatęUrodzenia() {
-		return "";
+		return this.dataUrodzenia;
 	}
 
 	@Override
 	public int dajNumerPESEL() {
-		return 0;
+		return this.numerPESEL;
 	}
 
 	@Override
@@ -72,5 +72,20 @@ public class Obywatel implements IObywatel {
 		// TODO - implement Obywatel.opisz
 		throw new UnsupportedOperationException();
 	}
+
+	@Override
+	public void podajNumerPESEL(int nowyPESEL) {
+		this.numerPESEL = nowyPESEL;
+	}
+
+	@Override
+	public void podajPłeć(String płeć) {
+		this.płeć = płeć;
+    }
+
+	@Override
+	public void podajDatęUrodzenia(String data) {
+		this.dataUrodzenia = dataUrodzenia;
+    }
 
 }

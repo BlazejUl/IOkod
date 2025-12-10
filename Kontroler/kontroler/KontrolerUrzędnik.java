@@ -22,8 +22,7 @@ public class KontrolerUrzędnik implements IKontrolerUrzędnik {
 	}
 
 	public void zmianaStanuCywilnego() {
-		// TODO - implement KontrolerUrzędnik.zmianaStanuCywilnego
-		throw new UnsupportedOperationException();
+		
 	}
 
 	public void zmianaDanychOsobowych() {
@@ -32,8 +31,7 @@ public class KontrolerUrzędnik implements IKontrolerUrzędnik {
 	}
 
 	public void wydanieNumeruPESEL() {
-		WydanieNrPESEL wydanieNrPESEL = new WydanieNrPESEL(model);
-		wydanieNrPESEL.wydanieNrPESEL();
+
 	}
 
 	public void zmianaDanychUrodzeniaPłci() {

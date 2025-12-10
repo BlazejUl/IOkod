@@ -10,9 +10,8 @@ public class ZatwierdzenieZmianyDanych {
 		throw new UnsupportedOperationException();
 	}
 
-	public void zatwierdzenieZmianyDanych() {
-		// TODO - implement ZatwierdzenieZmianyDanych.zatwierdzenieZmianyDanych
-		throw new UnsupportedOperationException();
+	public boolean zatwierdzenieZmianyDanych() {
+		return true;
 	}
 
 }

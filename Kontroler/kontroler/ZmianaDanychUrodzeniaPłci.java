@@ -2,30 +2,35 @@ package Kontroler.kontroler;
 
 import Model.model.*;
 
+import java.awt.*;
+import java.util.ArrayList;
+
 public class ZmianaDanychUrodzeniaPłci {
 
 	private IModel model;
 	private int PESEL;
-	private String[] noweDane;
+	private ArrayList noweDane;
 
-	public void zmianaDanych(int PESEL, String[] noweDane, IModel model) {
-		// TODO - implement ZmianaDanychUrodzeniaPłci.zmianaDanych
-		throw new UnsupportedOperationException();
+	public ZmianaDanychUrodzeniaPłci(IModel model, int PESEL) {
+		this.model = model;
+		this.PESEL = PESEL;
+		this.noweDane = new ArrayList<String>();
+		this.wprowadzenieDanychUrodzeniaPłci();
+		this.zatwierdzenieDanych();
+		ZatwierdzenieZmianyDanych pu09 = new ZatwierdzenieZmianyDanych();
+		if((this.zatwierdzenieDanych() && pu09.zatwierdzenieZmianyDanych()) == true ){
+			model.zmianaDanychUrodzeniaPłciObywatela(this.PESEL, this.noweDane);
+			WydanieNrPESEL pu06 = new WydanieNrPESEL(model);
+		}
 	}
 
-	private void wprowadzenieNumeruPESEL() {
-		// TODO - implement ZmianaDanychUrodzeniaP�ci.wprowadzenieNumeruPESEL
-		throw new UnsupportedOperationException();
+	private void wprowadzenieDanychUrodzeniaPłci() {
+		this.noweDane.add("21:12:2012");
+		this.noweDane.add("M");
 	}
 
-	private void wprowadzenieDanychUrodzeniaLubPłci() {
-		// TODO - implement ZmianaDanychUrodzeniaPłci.wprowadzenieDanychUrodzeniaLubPłci
-		throw new UnsupportedOperationException();
-	}
-
-	private boolean zatwierdzenieZmianyDanych() {
-		// TODO - implement ZmianaDanychUrodzeniaPłci.zatwierdzenieZmianyDanych
-		throw new UnsupportedOperationException();
+	private boolean zatwierdzenieDanych() {
+		return true;
 	}
 
 }

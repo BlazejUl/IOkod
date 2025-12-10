@@ -1,13 +1,15 @@
 package Model.model;
 
+import java.util.ArrayList;
+
 public class Model implements IModel {
 
 	private IDAO dao;
 	private spisObywateli Spis;
 
 	public Model(spisObywateli Spis, IDAO dao) {
-		// TODO - implement Model.Model
-		throw new UnsupportedOperationException();
+		this.Spis = Spis;
+		this.dao = dao;
 	}
 
 	public void zarejestrowanieZdarzenia(String zdarzenie) {
@@ -15,9 +17,8 @@ public class Model implements IModel {
 		throw new UnsupportedOperationException();
 	}
 
-	public void wyszukanieObywatela(int PESEL) {
-		// TODO - implement Model.wyszukanieObywatela
-		throw new UnsupportedOperationException();
+	public IObywatel wyszukanieObywatela(int PESEL) {
+		return Spis.dajObywatela(PESEL);
 	}
 
 	public boolean wysłanieProśbyOPotwierdzenieDoKierownikaUrzędu(int PESEL, String zmienioneDane) {
@@ -25,14 +26,20 @@ public class Model implements IModel {
 		throw new UnsupportedOperationException();
 	}
 
-	public void zmianaNumeruPESEL(int nowyNumerPESEL) {
-		// TODO - implement Model.zmianaNumeruPESEL
-		throw new UnsupportedOperationException();
+	public void zmianaNumeruPESEL(int PESEL, int nowyNumerPESEL) {
+		Spis.zmieńPESEL(PESEL, nowyNumerPESEL);
 	}
 
 	@Override
 	public void wyswietlenieDanychOsobowych(int PESEL) {
 
 	}
+
+	@Override
+	public void zmianaDanychUrodzeniaPłciObywatela(int PESEL, ArrayList Dane) {
+		Spis.zmianaDanychUrodzeniaPłciObywatela(PESEL,Dane);
+	}
+
+
 
 }

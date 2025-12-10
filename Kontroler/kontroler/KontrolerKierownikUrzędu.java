@@ -7,8 +7,8 @@ public class KontrolerKierownikUrzędu implements IKontrolerKierownikUrzędu {
 	private IModel model;
 
 	public void zatwierdzenieZmianyDanych() {
-		// TODO - implement KontrolerKierownikUrzędu.zatwierdzenieZmianyDanych
-		throw new UnsupportedOperationException();
+		ZatwierdzenieZmianyDanych pu09 = new ZatwierdzenieZmianyDanych();
+		pu09.zatwierdzenieZmianyDanych();
 	}
 
 	public void stworzenieSprawozdaniaStatystyk() {
@@ -46,8 +46,9 @@ public class KontrolerKierownikUrzędu implements IKontrolerKierownikUrzędu {
 	}
 
 	public void zmianaDanychUrodzeniaPłci() {
-		// TODO - implement KontrolerKierownikUrzędu.zmianaDanychUrodzeniaPłci
-		throw new UnsupportedOperationException();
+		int PESEL = 123;
+		ZmianaDanychUrodzeniaPłci pu05 = new ZmianaDanychUrodzeniaPłci(model,PESEL);
+
 	}
 
 	public void wydanieDowoduOsobistego() {
