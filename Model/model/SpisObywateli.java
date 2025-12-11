@@ -2,12 +2,12 @@ package Model.model;
 
 import java.util.ArrayList;
 
-public class spisObywateli {
+public class SpisObywateli {
 
 	private IDAO dao;
 	private ArrayList<IObywatel> obywatele;
 
-	public spisObywateli(IDAO dao) {
+	public SpisObywateli(IDAO dao) {
 		this.dao = dao;
 		this.obywatele = new ArrayList<>();
 		this.obywatele.add(new Obywatel("",123,0,"","",""));

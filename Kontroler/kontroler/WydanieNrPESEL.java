@@ -10,26 +10,29 @@ public class WydanieNrPESEL {
 	private int nowyPESEL;
 	private IModel model;
 
-	Scanner scanner = new Scanner(System.in);
-	public WydanieNrPESEL(IModel model) {
+	public WydanieNrPESEL(IModel model,int PESEL) {
 		this.model = model;
-		
-	}
-
-	private void wydanieNrPESEL() {
-		System.out.println("wydawanie");
-	}
-
-	private void wprowadzenieNumeruPESEL(int PESEL) {
 		this.staryPESEL = PESEL;
-    }
+		nowyPESEL = podanieNowegoNumeruPESEL();
+		if(zatwierdzenieNowegoNumeruPESEL()){
+			model.zmianaNumeruPESEL(staryPESEL,nowyPESEL);
+			wydanieNrPESEL();
+		}
+	}
 
-	private void podanieNowegoNumeruPESEL(int nowyPESEL) {
-		this.nowyPESEL = nowyPESEL;
+	private int podanieNowegoNumeruPESEL() {
+		return 155;
 	}
 
 	private boolean zatwierdzenieNowegoNumeruPESEL() {
 		return true;
 	}
 
+	private int wprowadzenieNumeruPESEL() {
+		return 123;
+	}
+
+	private void wydanieNrPESEL() {
+		System.out.println("wydanie pesel");
+	}
 }

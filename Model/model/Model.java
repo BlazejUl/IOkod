@@ -5,10 +5,10 @@ import java.util.ArrayList;
 public class Model implements IModel {
 
 	private IDAO dao;
-	private spisObywateli Spis;
+	private SpisObywateli spis;
 
-	public Model(spisObywateli Spis, IDAO dao) {
-		this.Spis = Spis;
+	public Model(SpisObywateli spis, IDAO dao) {
+		this.spis = spis;
 		this.dao = dao;
 	}
 
@@ -18,7 +18,7 @@ public class Model implements IModel {
 	}
 
 	public IObywatel wyszukanieObywatela(int PESEL) {
-		return Spis.dajObywatela(PESEL);
+		return spis.dajObywatela(PESEL);
 	}
 
 	public boolean wysłanieProśbyOPotwierdzenieDoKierownikaUrzędu(int PESEL, String zmienioneDane) {
@@ -27,7 +27,7 @@ public class Model implements IModel {
 	}
 
 	public void zmianaNumeruPESEL(int PESEL, int nowyNumerPESEL) {
-		Spis.zmieńPESEL(PESEL, nowyNumerPESEL);
+		spis.zmieńPESEL(PESEL, nowyNumerPESEL);
 	}
 
 	@Override
@@ -37,7 +37,7 @@ public class Model implements IModel {
 
 	@Override
 	public void zmianaDanychUrodzeniaPłciObywatela(int PESEL, ArrayList Dane) {
-		Spis.zmianaDanychUrodzeniaPłciObywatela(PESEL,Dane);
+		spis.zmianaDanychUrodzeniaPłciObywatela(PESEL,Dane);
 	}
 
 
