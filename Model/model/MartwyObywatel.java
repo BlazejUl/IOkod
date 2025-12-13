@@ -19,4 +19,19 @@ public class MartwyObywatel extends DekoratorObywatela {
 		throw new UnsupportedOperationException();
 	}
 
+	@Override
+	public void podajNumerPESEL(int nowyPESEL) {
+
+	}
+
+	@Override
+	public void podajPłeć(String płeć) {
+
+	}
+
+	@Override
+	public void podajDatęUrodzenia(String data) {
+
+	}
+
 }

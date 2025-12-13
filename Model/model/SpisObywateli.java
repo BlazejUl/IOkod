@@ -24,6 +24,10 @@ public class SpisObywateli {
         return null;
     }
 
+	public ArrayList<IObywatel> dajObywateli(){
+		return obywatele;
+	}
+
 	public void zmianaDanychUrodzeniaPłciObywatela(int PESEL, ArrayList Dane){
 		for(IObywatel obywatel : obywatele){
 			if (obywatel.dajNumerPESEL()==PESEL){
