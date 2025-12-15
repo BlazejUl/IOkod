@@ -4,27 +4,17 @@ public class Obywatel implements IObywatel {
 
 	private String imię;
 	private String nazwisko;
-	private String dataUrodzenia;
 	private String krajUrodzenia;
 	private String miejsceUrodzenia;
-	private int numerPESEL;
-	private int wiek;
-	private String płeć;
+	private String wiek;
 	private String miejsceZamieszkania;
+	private String płeć;
 	private String stanCywilny;
+	private String dataUrodzenia;
+	private int numerPESEL;
 
 	public Obywatel(String dataUrodzenia, int numerPESEL, int wiek, String płeć, String miejsceZamieszkania, String stanCywilny) {
 		// TODO - implement Obywatel.Obywatel
-		throw new UnsupportedOperationException();
-	}
-
-	public String dajKrajUrodzenia() {
-		// TODO - implement Obywatel.dajKrajUrodzenia
-		throw new UnsupportedOperationException();
-	}
-
-	public String dajMiejsceUrodzenia() {
-		// TODO - implement Obywatel.dajMiejsceUrodzenia
 		throw new UnsupportedOperationException();
 	}
 
@@ -39,38 +29,61 @@ public class Obywatel implements IObywatel {
 	}
 
 	@Override
-	public int dajWiek() {
-		return 0;
-	}
+	public String dajWiek() { return this.wiek; }
 
 	@Override
 	public String dajPłeć() {
-		return "";
+		return this.płeć;
 	}
 
 	@Override
 	public String dajMiejsceZamieszkania() {
-		return "";
+		return this.miejsceZamieszkania;
 	}
 
 	@Override
 	public String dajStanCywilny() {
-		return "";
+		return this.stanCywilny;
 	}
 
 	@Override
 	public String dajImię() {
-		return "";
+		return this.imię;
 	}
 
 	@Override
 	public String dajNazwisko() {
-		return "";
+		return this.nazwisko;
 	}
+
+	@Override
+	public String dajKrajUrodzenia() { return this.krajUrodzenia; }
+
+	@Override
+	public String dajMiejsceUrodzenia() { return this.miejsceUrodzenia; }
 
 	public String opisz() {
 		// TODO - implement Obywatel.opisz
 		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public void podajImię(String imię) {this.imię = imię;}
+
+	@Override
+	public void podajNazwisko(String nazwisko) { this.nazwisko = nazwisko;}
+
+	@Override
+	public void podajDatęUrodzenia(String dataUrodzenia) {
+		this.dataUrodzenia = dataUrodzenia;
+	}
+
+	@Override
+	public void podajKrajUrodzenia(String krajUrodzenia) {this.krajUrodzenia = krajUrodzenia;}
+
+	@Override
+	public void podajMiejsceUrodzenia(String miejsceUrodzenia) {
+		this.miejsceUrodzenia = miejsceUrodzenia;
 	}
 
 	@Override
@@ -79,13 +92,24 @@ public class Obywatel implements IObywatel {
 	}
 
 	@Override
+	public void podajWiek(String wiek) {
+		this.wiek = wiek;
+	}
+
+	@Override
 	public void podajPłeć(String płeć) {
 		this.płeć = płeć;
     }
 
 	@Override
-	public void podajDatęUrodzenia(String data) {
-		this.dataUrodzenia = dataUrodzenia;
-    }
+	public void podajMiejsceZamieszkania(String miejsceZamieszkania) {
+		this.miejsceZamieszkania = miejsceZamieszkania;
+	}
+
+	@Override
+	public void podajStanCywilny(String stanCywilny) {
+		this.stanCywilny = stanCywilny;
+	}
+
 
 }

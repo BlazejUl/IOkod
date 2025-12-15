@@ -15,4 +15,8 @@ public interface IModel {
 	void wyswietlenieDanychOsobowych(int PESEL);
 
 	void zmianaDanychUrodzeniaPłciObywatela(int PESEL, ArrayList Dane);
+
+	void zmianaStanuCywilnegoObywatela(int PESEL, String nowyStan);
+
+	void zmianaDanychOsobowychObywatela(int PESEL, ArrayList Dane);
 }

@@ -40,6 +40,15 @@ public class Model implements IModel {
 		spis.zmianaDanychUrodzeniaPłciObywatela(PESEL,Dane);
 	}
 
+	@Override
+	public void zmianaStanuCywilnegoObywatela(int PESEL, String nowyStan){
+		spis.zmianaStanuCywilnegoObywatela(PESEL, nowyStan);
+	}
+
+	@Override
+	public void zmianaDanychOsobowychObywatela(int PESEL, ArrayList Dane){
+		spis.zmianaDanychOsobowychObywatela(PESEL, Dane);
+	}
 
 
 }

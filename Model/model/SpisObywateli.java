@@ -45,4 +45,25 @@ public class SpisObywateli {
 		}
 	}
 
+	public void zmianaDanychOsobowychObywatela(int PESEL, ArrayList Dane){
+		for(IObywatel obywatel : obywatele){
+			if (obywatel.dajNumerPESEL()==PESEL){
+				if(!Dane.get(0).equals("")){obywatel.podajImię(String.valueOf(Dane.get(0)));}
+				if(!Dane.get(1).equals("")){obywatel.podajNazwisko(String.valueOf(Dane.get(1)));}
+				if(!Dane.get(2).equals("")){obywatel.podajKrajUrodzenia(String.valueOf(Dane.get(2)));}
+				if(!Dane.get(3).equals("")){obywatel.podajMiejsceUrodzenia(String.valueOf(Dane.get(3)));}
+				if(!Dane.get(4).equals("")){obywatel.podajWiek(String.valueOf(Dane.get(4)));}
+				if(!Dane.get(5).equals("")){obywatel.podajMiejsceZamieszkania(String.valueOf(Dane.get(5)));}
+			}
+		}
+	}
+
+	public void zmianaStanuCywilnegoObywatela(int PESEL, String nowyStan){
+		for(IObywatel obywatel : obywatele){
+			if (obywatel.dajNumerPESEL()==PESEL){
+				if(nowyStan.equals("")){obywatel.podajStanCywilny(nowyStan);}
+			}
+		}
+	}
+
 }

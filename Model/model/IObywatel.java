@@ -6,7 +6,7 @@ public interface IObywatel {
 
 	int dajNumerPESEL();
 
-	int dajWiek();
+	String dajWiek();
 
 	String dajPłeć();
 
@@ -18,12 +18,30 @@ public interface IObywatel {
 
 	String dajNazwisko();
 
+	String dajKrajUrodzenia();
+
+	String dajMiejsceUrodzenia();
+
 	String opisz();
+
+	void podajImię(String imię);
+
+	void podajNazwisko(String nazwisko);
+
+	void podajDatęUrodzenia(String data);
+
+	void podajKrajUrodzenia(String kraj);
+
+	void podajMiejsceUrodzenia(String miejsce);
 
 	void podajNumerPESEL(int nowyPESEL);
 
+	void podajWiek(String wiek);
+
 	void podajPłeć(String płeć);
 
-	void podajDatęUrodzenia(String data);
+	void podajMiejsceZamieszkania(String miejsce);
+
+	void podajStanCywilny(String stan);
 
 }
