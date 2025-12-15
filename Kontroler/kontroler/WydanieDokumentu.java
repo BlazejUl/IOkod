@@ -2,7 +2,7 @@ package Kontroler.kontroler;
 
 import java.util.Scanner;
 
-public class WydanieDokumentu implements IWyjścieStrategia {
+public class WydanieDokumentu extends IWyjścieStrategia {
 
 	Scanner scanner = new Scanner(System.in);
 
@@ -19,8 +19,9 @@ public class WydanieDokumentu implements IWyjścieStrategia {
 	}
 
 	public void wyjście() {
-		// TODO - implement WydanieDokumentu.wyj�cie
-		throw new UnsupportedOperationException();
+		String typDokumentu = "zmiana stanu cywilnego";
+		System.out.println("wydanie " + typDokumentu);
 	}
+
 
 }

@@ -2,38 +2,47 @@ package Kontroler.kontroler;
 
 import Model.model.*;
 
+import java.util.ArrayList;
+
 public class ZmianaStanuCywilnego {
 
 	private IModel model;
 	private int PESEL;
 	private String stanCywilny;
 	private IWyjścieStrategia exitStrategy;
-	private String[] noweDane;
+	private ArrayList noweNazwisko;
 	private String typDokumentu;
 
 	public void zmianaStanuCywilnego(IModel model, int PESEL, String stanCywilny) {
-		// TODO - implement ZmianaStanuCywilnego.zmianaStanuCywilnego
-		throw new UnsupportedOperationException();
+		this.model = model;
+		this.wprowadzenieNrPESEL();
+		this.wprowadzenieStanuCywilnego();
+		model.zmianaStanuCywilnegoObywatela(this.PESEL, this.stanCywilny);
+		this.wybórOpcji();
+		this.exitStrategy.wyjście();
+
 	}
 
 	private void wybórOpcji() {
-		// TODO - implement ZmianaStanuCywilnego.wyb�rOpcji
-		throw new UnsupportedOperationException();
+		int wybór = 1;
+		if (wybór==1){
+			this.exitStrategy = new WydanieDokumentu();
+		}
+		if (wybór==2){
+			this.noweNazwisko = new ArrayList<String>();
+			this.noweNazwisko.add("");
+			this.noweNazwisko.add("Kowalska");
+			this.exitStrategy = new ZmianaDanychOsobowych(model, PESEL, noweNazwisko);
+		}
 	}
 
 	private void wprowadzenieNrPESEL() {
-		// TODO - implement ZmianaStanuCywilnego.wprowadzenieNrPESEL
-		throw new UnsupportedOperationException();
+		this.PESEL = 123;
 	}
 
-	private boolean wprowadzenieStanuCywilnego() {
-		// TODO - implement ZmianaStanuCywilnego.wprowadzenieStanuCywilnego
-		throw new UnsupportedOperationException();
-	}
+	private void wprowadzenieStanuCywilnego() {
+		this.stanCywilny = "kawaler";
 
-	public void wyjście() {
-		// TODO - implement ZmianaStanuCywilnego.wyj�cie
-		throw new UnsupportedOperationException();
 	}
 
 }

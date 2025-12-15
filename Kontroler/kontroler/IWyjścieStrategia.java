@@ -1,7 +1,7 @@
 package Kontroler.kontroler;
 
-public interface IWyjścieStrategia {
+public abstract class IWyjścieStrategia {
 
-	void wyjście();
+	public abstract void wyjście();
 
 }

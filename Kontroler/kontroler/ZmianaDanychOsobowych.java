@@ -1,30 +1,43 @@
 package Kontroler.kontroler;
 
-public class ZmianaDanychOsobowych implements IWyjścieStrategia {
+import Model.model.IModel;
 
-	public void zmianaDanychOsobowych(Model.model.IModel model, int PESEL, String[] noweDane) {
-		// TODO - implement ZmianaDanychOsobowych.zmianaDanychOsobowych
-		throw new UnsupportedOperationException();
+import java.util.ArrayList;
+
+public class ZmianaDanychOsobowych extends IWyjścieStrategia {
+
+	private IModel model;
+	private int PESEL;
+	private ArrayList noweDane;
+
+
+	public ZmianaDanychOsobowych(Model.model.IModel model, int PESEL, ArrayList noweDane) {
+		this.model = model;
+		this.PESEL = PESEL;
+		this.noweDane = noweDane;
+		if(this.zatwierdzenieZmianyDanychOsobowych() && noweDane.size() == 6){
+			model.zmianaDanychOsobowychObywatela(PESEL, noweDane);
+		}
+
 	}
 
 	private void wprowadzenieDanychOsobowych() {
-		// TODO - implement ZmianaDanychOsobowych.wprowadzenieDanychOsobowych
-		throw new UnsupportedOperationException();
+		this.noweDane = new ArrayList<String>();
+		noweDane.add("Adam");
+		noweDane.add("Kowalski");
+		noweDane.add("Polska");
+		noweDane.add("Warszawa");
+		noweDane.add("23");
+		noweDane.add("Warszawa  ul. Jana Pawła II 29/7 ");
+
 	}
 
-	private void zatwierdzenieZmianyDanychOsobowych() {
-		// TODO - implement ZmianaDanychOsobowych.zatwierdzenieZmianyDanychOsobowych
-		throw new UnsupportedOperationException();
-	}
-
-	private String[] odczytNowychDanych(String[] noweDane) {
-		// TODO - implement ZmianaDanychOsobowych.odczytNowychDanych
-		throw new UnsupportedOperationException();
-	}
+	private boolean zatwierdzenieZmianyDanychOsobowych(){return true;}
 
 	public void wyjście() {
-		// TODO - implement ZmianaDanychOsobowych.wyjście
-		throw new UnsupportedOperationException();
+		if (this.zatwierdzenieZmianyDanychOsobowych()){
+			model.zmianaDanychOsobowychObywatela(PESEL, noweDane);
+		}
 	}
 
 }
