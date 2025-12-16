@@ -12,11 +12,11 @@ public class ZmianaDanychUrodzeniaPłci {
 	private ArrayList noweDane;
 
 	public ZmianaDanychUrodzeniaPłci(IModel model, int PESEL) {
+		System.out.println("ZmianaDanychUrodzeniaPłci");
 		this.model = model;
 		this.PESEL = PESEL;
 		this.noweDane = new ArrayList<String>();
 		this.wprowadzenieDanychUrodzeniaPłci();
-		this.zatwierdzenieDanych();
 		ZatwierdzenieZmianyDanych pu09 = new ZatwierdzenieZmianyDanych();
 		if((this.zatwierdzenieDanych() && pu09.zatwierdzenieZmianyDanych()) == true ){
 			model.zmianaDanychUrodzeniaPłciObywatela(this.PESEL, this.noweDane);
@@ -25,11 +25,13 @@ public class ZmianaDanychUrodzeniaPłci {
 	}
 
 	private void wprowadzenieDanychUrodzeniaPłci() {
+		System.out.println("wprowadzenieDanychUrodzeniaPłci");
 		this.noweDane.add("21:12:2012");
 		this.noweDane.add("M");
 	}
 
 	private boolean zatwierdzenieDanych() {
+		System.out.println("zatwierdzenieDanych");
 		return true;
 	}
 

@@ -11,6 +11,7 @@ public class ZatwierdzenieZmianyDanych {
 	}
 
 	public boolean zatwierdzenieZmianyDanych() {
+		System.out.println("zatwierdzenieZmianyDanych");
 		return true;
 	}
 

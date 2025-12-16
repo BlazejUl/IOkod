@@ -6,6 +6,10 @@ public class KontrolerUrzędnik implements IKontrolerUrzędnik {
 
 	private IModel model;
 
+	public KontrolerUrzędnik(IModel model){
+		this.model = model;
+	}
+
 	public void zameldowanieObywatela() {
 		// TODO - implement KontrolerUrzędnik.zameldowanieObywatela
 		throw new UnsupportedOperationException();

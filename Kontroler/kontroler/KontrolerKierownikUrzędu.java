@@ -6,6 +6,10 @@ public class KontrolerKierownikUrzędu implements IKontrolerKierownikUrzędu {
 
 	private IModel model;
 
+	KontrolerKierownikUrzędu(IModel model){
+		this.model = model;
+	}
+
 	public void zatwierdzenieZmianyDanych() {
 		ZatwierdzenieZmianyDanych pu09 = new ZatwierdzenieZmianyDanych();
 		pu09.zatwierdzenieZmianyDanych();

@@ -11,6 +11,7 @@ public class WydanieNrPESEL {
 	private IModel model;
 
 	public WydanieNrPESEL(IModel model,int PESEL) {
+		System.out.println("WydanieNrPESEL");
 		this.model = model;
 		this.staryPESEL = PESEL;
 		nowyPESEL = podanieNowegoNumeruPESEL();
@@ -21,10 +22,12 @@ public class WydanieNrPESEL {
 	}
 
 	private int podanieNowegoNumeruPESEL() {
+		System.out.println("podanieNowegoNumeruPESEL");
 		return 155;
 	}
 
 	private boolean zatwierdzenieNowegoNumeruPESEL() {
+		System.out.println("zatwierdzenieNowegoNumeruPESEL");
 		return true;
 	}
 

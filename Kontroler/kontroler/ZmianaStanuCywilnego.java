@@ -1,7 +1,6 @@
 package Kontroler.kontroler;
 
 import Model.model.*;
-
 import java.util.ArrayList;
 
 public class ZmianaStanuCywilnego {
@@ -14,6 +13,7 @@ public class ZmianaStanuCywilnego {
 	private String typDokumentu;
 
 	public ZmianaStanuCywilnego(IModel model, int PESEL, String stanCywilny) {
+		System.out.println("ZmianaStanuCywilnego");
 		this.model = model;
 		this.stanCywilny = stanCywilny;
 		this.PESEL = PESEL;
@@ -26,6 +26,7 @@ public class ZmianaStanuCywilnego {
 	}
 
 	private void wybórOpcji() {
+		System.out.println("wybórOpcji");
 		int wybór = 1;
 		if (wybór==1){
 			this.typDokumentu = "zmiana stanu cywilnego";
@@ -40,10 +41,12 @@ public class ZmianaStanuCywilnego {
 	}
 
 	private void wprowadzenieNrPESEL() {
+		System.out.println("wprowadzenieNrPESEL");
 		this.PESEL = 123;
 	}
 
 	private void wprowadzenieStanuCywilnego() {
+		System.out.println("wprowadzenieStanuCywilnego");
 		this.stanCywilny = "kawaler";
 
 	}

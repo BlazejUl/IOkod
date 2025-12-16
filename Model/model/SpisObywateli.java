@@ -10,9 +10,9 @@ public class SpisObywateli {
 	public SpisObywateli(IDAO dao) {
 		this.dao = dao;
 		this.obywatele = new ArrayList<>();
-		this.obywatele.add(new Obywatel("",123,0,"","",""));
-		this.obywatele.add(new Obywatel("",124,0,"","",""));
-		this.obywatele.add(new Obywatel("",125,0,"","",""));
+		this.obywatele.add(new Obywatel("",123,0,"","","","","","",""));
+		this.obywatele.add(new Obywatel("",124,0,"","","","","","",""));
+		this.obywatele.add(new Obywatel("",125,0,"","","","","","",""));
 	}
 
 	public IObywatel dajObywatela(int PESEL) {

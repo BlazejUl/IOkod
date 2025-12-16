@@ -14,13 +14,38 @@ public class MartwyObywatel extends DekoratorObywatela {
 		throw new UnsupportedOperationException();
 	}
 
+	@Override
+	public String dajKrajUrodzenia() {
+		return "";
+	}
+
+	@Override
+	public String dajMiejsceUrodzenia() {
+		return "";
+	}
+
 	public String opisz() {
 		// TODO - implement MartwyObywatel.opisz
 		throw new UnsupportedOperationException();
 	}
 
 	@Override
+	public void podajImię(String imię) {
+
+	}
+
+	@Override
+	public void podajNazwisko(String nazwisko) {
+
+	}
+
+	@Override
 	public void podajNumerPESEL(int nowyPESEL) {
+
+	}
+
+	@Override
+	public void podajWiek(int wiek) {
 
 	}
 
@@ -30,7 +55,27 @@ public class MartwyObywatel extends DekoratorObywatela {
 	}
 
 	@Override
+	public void podajMiejsceZamieszkania(String miejsce) {
+
+	}
+
+	@Override
+	public void podajStanCywilny(String stan) {
+
+	}
+
+	@Override
 	public void podajDatęUrodzenia(String data) {
+
+	}
+
+	@Override
+	public void podajKrajUrodzenia(String kraj) {
+
+	}
+
+	@Override
+	public void podajMiejsceUrodzenia(String miejsce) {
 
 	}
 

@@ -13,9 +13,13 @@ public class Obywatel implements IObywatel {
 	private String dataUrodzenia;
 	private int numerPESEL;
 
-	public Obywatel(String dataUrodzenia, int numerPESEL, int wiek, String płeć, String miejsceZamieszkania, String stanCywilny) {
-		// TODO - implement Obywatel.Obywatel
-		throw new UnsupportedOperationException();
+	public Obywatel(String dataUrodzenia, int numerPESEL, int wiek, String płeć, String miejsceZamieszkania, String stanCywilny, String miejsceUrodzenia,String krajUrodzenia, String nazwisko, String imię) {
+		this.dataUrodzenia = dataUrodzenia;
+		this.numerPESEL = numerPESEL;
+		this.wiek = wiek;
+		this.płeć = płeć;
+		this.miejsceZamieszkania = miejsceZamieszkania;
+		this.stanCywilny = stanCywilny;
 	}
 
 	@Override
