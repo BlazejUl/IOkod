@@ -21,8 +21,8 @@ public abstract class DekoratorObywatela implements IObywatel {
 	}
 
 	@Override
-	public String dajWiek() {
-		return "";
+	public int dajWiek() {
+		return -1;
 	}
 
 	@Override

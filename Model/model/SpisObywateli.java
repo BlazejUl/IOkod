@@ -52,7 +52,7 @@ public class SpisObywateli {
 				if(!Dane.get(1).equals("")){obywatel.podajNazwisko(String.valueOf(Dane.get(1)));}
 				if(!Dane.get(2).equals("")){obywatel.podajKrajUrodzenia(String.valueOf(Dane.get(2)));}
 				if(!Dane.get(3).equals("")){obywatel.podajMiejsceUrodzenia(String.valueOf(Dane.get(3)));}
-				if(!Dane.get(4).equals("")){obywatel.podajWiek(String.valueOf(Dane.get(4)));}
+				if(!Dane.get(4).equals("")){obywatel.podajWiek(Integer.valueOf(String.valueOf(Dane.get(4))));}
 				if(!Dane.get(5).equals("")){obywatel.podajMiejsceZamieszkania(String.valueOf(Dane.get(5)));}
 			}
 		}

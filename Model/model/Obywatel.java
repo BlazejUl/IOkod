@@ -6,7 +6,7 @@ public class Obywatel implements IObywatel {
 	private String nazwisko;
 	private String krajUrodzenia;
 	private String miejsceUrodzenia;
-	private String wiek;
+	private int wiek;
 	private String miejsceZamieszkania;
 	private String płeć;
 	private String stanCywilny;
@@ -29,7 +29,7 @@ public class Obywatel implements IObywatel {
 	}
 
 	@Override
-	public String dajWiek() { return this.wiek; }
+	public int dajWiek() { return this.wiek; }
 
 	@Override
 	public String dajPłeć() {
@@ -92,7 +92,7 @@ public class Obywatel implements IObywatel {
 	}
 
 	@Override
-	public void podajWiek(String wiek) {
+	public void podajWiek(int wiek) {
 		this.wiek = wiek;
 	}
 

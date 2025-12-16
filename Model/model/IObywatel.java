@@ -6,7 +6,7 @@ public interface IObywatel {
 
 	int dajNumerPESEL();
 
-	String dajWiek();
+	int dajWiek();
 
 	String dajPłeć();
 
@@ -36,7 +36,7 @@ public interface IObywatel {
 
 	void podajNumerPESEL(int nowyPESEL);
 
-	void podajWiek(String wiek);
+	void podajWiek(int wiek);
 
 	void podajPłeć(String płeć);
 
