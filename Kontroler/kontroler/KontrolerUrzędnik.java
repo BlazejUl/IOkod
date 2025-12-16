@@ -12,7 +12,8 @@ public class KontrolerUrzędnik implements IKontrolerUrzędnik {
 	}
 
 	public void wydanieDokumentu() {
-		WydanieDokumentu wydanieDokumentu = new WydanieDokumentu();
+		String typDokumentu="zmiana miejsca zamieszkania";
+		WydanieDokumentu wydanieDokumentu = new WydanieDokumentu(typDokumentu);
 		wydanieDokumentu.wydajDokument();
 	}
 
@@ -22,7 +23,9 @@ public class KontrolerUrzędnik implements IKontrolerUrzędnik {
 	}
 
 	public void zmianaStanuCywilnego() {
-		
+		String stanCywilny = "kawaler";
+		int PESEL = 123;
+		ZmianaStanuCywilnego pu03 = new ZmianaStanuCywilnego(model, PESEL, stanCywilny);
 	}
 
 	public void zmianaDanychOsobowych() {

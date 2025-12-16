@@ -13,8 +13,10 @@ public class ZmianaStanuCywilnego {
 	private ArrayList noweNazwisko;
 	private String typDokumentu;
 
-	public void zmianaStanuCywilnego(IModel model, int PESEL, String stanCywilny) {
+	public ZmianaStanuCywilnego(IModel model, int PESEL, String stanCywilny) {
 		this.model = model;
+		this.stanCywilny = stanCywilny;
+		this.PESEL = PESEL;
 		this.wprowadzenieNrPESEL();
 		this.wprowadzenieStanuCywilnego();
 		model.zmianaStanuCywilnegoObywatela(this.PESEL, this.stanCywilny);
@@ -26,7 +28,8 @@ public class ZmianaStanuCywilnego {
 	private void wybórOpcji() {
 		int wybór = 1;
 		if (wybór==1){
-			this.exitStrategy = new WydanieDokumentu();
+			this.typDokumentu = "zmiana stanu cywilnego";
+			this.exitStrategy = new WydanieDokumentu(typDokumentu);
 		}
 		if (wybór==2){
 			this.noweNazwisko = new ArrayList<String>();
