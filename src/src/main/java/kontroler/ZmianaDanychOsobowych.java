@@ -20,14 +20,9 @@ public class ZmianaDanychOsobowych extends IWyjścieStrategia {
 
 	}
 
-	private void wprowadzenieDanychOsobowych() {
-		this.noweDane = new ArrayList<String>();
-		noweDane.add("Adam");
-		noweDane.add("Kowalski");
-		noweDane.add("Polska");
-		noweDane.add("Warszawa");
-		noweDane.add("23");
-		noweDane.add("Warszawa  ul. Jana Pawła II 29/7 ");
+	public void wprowadzenieDanychOsobowych(int PESEL,ArrayList noweDane) {
+
+		model.zmianaDanychOsobowychObywatela(PESEL, noweDane);
 
 	}
 

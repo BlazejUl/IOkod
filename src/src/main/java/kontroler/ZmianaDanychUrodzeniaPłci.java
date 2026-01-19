@@ -18,7 +18,7 @@ public class ZmianaDanychUrodzeniaPłci {
 		this.wprowadzenieDanychUrodzeniaPłci();
 		ZatwierdzenieZmianyDanych pu09 = new ZatwierdzenieZmianyDanych();
 		if((this.zatwierdzenieDanych() && pu09.zatwierdzenieZmianyDanych()) == true ){
-			model.zmianaDanychUrodzeniaPłciObywatela(this.PESEL, this.noweDane);
+			this.model.zmianaDanychUrodzeniaPłciObywatela(this.PESEL, this.noweDane);
 			WydanieNrPESEL pu06 = new WydanieNrPESEL(model, this.PESEL);
 		}
 	}
