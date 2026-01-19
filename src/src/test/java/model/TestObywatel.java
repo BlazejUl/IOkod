@@ -5,33 +5,32 @@ import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
-
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class TestObywatel {
 
     @Test
     @Order(1)
-    @DisplayName("test konstruktora obywatela")
+    @DisplayName("Test konstruktora obywatela")
 
-    void testDodaniaDanych() {
-        // given
-
-        Obywatel obywatel = new Obywatel("1.1.2000",12345, 26,"kobieta","Wrocław","panna","Wrocław","Polska","Kowalska","Anna");
-        // when
-        int wynik = 12345;
-        // then
-        Assertions.assertEquals(wynik, obywatel.dajNumerPESEL());
+    void TestInicjalizacji() {
+        // jeśli
+        int PESEL = 12345;
+        // gdy
+        Obywatel obywatel = new Obywatel("1.1.2000",PESEL, 26,"kobieta","Wrocław","panna","Wrocław","Polska","Kowalska","Anna");
+        // wtedy
+        Assertions.assertEquals(PESEL, obywatel.dajNumerPESEL());
 
     }
     @Test
     @Order(2)
-    @DisplayName("test metody opisz")
+    @DisplayName("Test metody opisz")
 
-    void testMetodyOpisz(){
-        // given
+    void TestMetodyOpisz(){
+        // jeśli
+        // metoda opisz ma zwrócić wyjątek UnsupportedOperationException
+        // gdy
         Obywatel obywatel = new Obywatel("1.1.2000",12345, 26,"kobieta","Wrocław","panna","Wrocław","Polska","Kowalska","Anna");
-        // when
-
-        // then
+        // wtedy
         Exception wyjątek = Assertions.assertThrows(UnsupportedOperationException.class, () -> {
             obywatel.opisz();
         });

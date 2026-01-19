@@ -24,6 +24,10 @@ public class SpisObywateli {
         return null;
     }
 
+	public void dodajObywatela(IObywatel obywatel){
+		this.obywatele.add(obywatel);
+	}
+
 	public ArrayList<IObywatel> dajObywateli(){
 		return obywatele;
 	}
