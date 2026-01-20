@@ -8,11 +8,13 @@ import org.junit.jupiter.params.provider.ValueSource;
 import java.util.ArrayList;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+@DisplayName("Test klasy SpisObywateli")
 public class TestSpisObywateli {
     private int i = -1;
     private static int[] numeryPESEL = {12345, 67890, 72843, 13791};
     private ArrayList<IObywatel> obywatele = new ArrayList<>();
     private IDAO dao;
+
     @BeforeEach
     public void PrzygotowanieDanych(){
 
@@ -23,6 +25,9 @@ public class TestSpisObywateli {
     }
     @Test
     @Order(1)
+    @Tag("spisObywateli")
+    @Tag("model")
+    @Tag("inizjalizacja")
     @DisplayName("Test dodawania obywateli do spisu")
     public void TestInicjalizacji(){
         // jeśli
@@ -39,6 +44,9 @@ public class TestSpisObywateli {
 
     @ParameterizedTest
     @Order(2)
+    @Tag("spisObywateli")
+    @Tag("model")
+    @Tag("funkcja")
     @DisplayName("Test znajdywania obywatela po numerze PESEL")
     @FieldSource("numeryPESEL")
     void TestWyszukiwaniaObywatela(int numerPESEL){
@@ -56,6 +64,9 @@ public class TestSpisObywateli {
 
     @ParameterizedTest
     @Order(3)
+    @Tag("spisObywateli")
+    @Tag("model")
+    @Tag("inicjalizacja")
     @DisplayName("Test zmiany numeru PESEL obywatela")
     @ValueSource(ints = {11111, 22222, 33333})
     public void TestZmianyNumeruPESEL(int TestoweNumeryPESEL){

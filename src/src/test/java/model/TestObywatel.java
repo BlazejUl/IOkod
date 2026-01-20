@@ -6,10 +6,15 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+
+@DisplayName("Test klasy Obywatel")
 public class TestObywatel {
 
     @Test
     @Order(1)
+    @Tag("obywatel")
+    @Tag("model")
+    @Tag("inicjalizacja")
     @DisplayName("Test konstruktora obywatela")
 
     void TestInicjalizacji() {
@@ -23,6 +28,9 @@ public class TestObywatel {
     }
     @Test
     @Order(2)
+    @Tag("obywatel")
+    @Tag("model")
+    @Tag("funkcja")
     @DisplayName("Test metody opisz")
 
     void TestMetodyOpisz(){
