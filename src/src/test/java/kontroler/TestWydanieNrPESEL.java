@@ -1,13 +1,11 @@
 package kontroler;
 
 import model.Model;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.mockito.Mockito.*;
 
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @DisplayName("testy klasy wydanieNrPESEL")
 public class TestWydanieNrPESEL {
 
