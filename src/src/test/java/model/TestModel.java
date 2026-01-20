@@ -1,18 +1,23 @@
 package model;
 
 
+import kontroler.WydanieNrPESEL;
 import org.junit.jupiter.api.*;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
 
 import java.util.ArrayList;
-
 import static org.mockito.Mockito.*;
+import static org.mockito.MockitoAnnotations.openMocks;
+
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @DisplayName("testy klasy model")
 public class TestModel {
-
     @Test
     @Order(1)
     @Tag("model")
     @Tag("funkcja")
+
     public void TestZmianaDanychUrodzeniaPłciObywatela(){
         //Jeśli
         int PESEL = 1234;
@@ -25,7 +30,7 @@ public class TestModel {
         noweDane.add("Warszawa  ul. Jana Pawła II 29/7 ");
         DAO mockDAO = mock(DAO.class);
         SpisObywateli mockSpis = mock(SpisObywateli.class);
-        doNothing().when(mockSpis).zmianaDanychOsobowychObywatela(PESEL,noweDane);
+
         Model model = new Model(mockSpis,mockDAO);
         //Gdy
         model.zmianaDanychOsobowychObywatela(PESEL,noweDane);
