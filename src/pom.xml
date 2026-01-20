@@ -35,9 +35,16 @@
         <dependency>
             <groupId>org.junit.platform</groupId>
             <artifactId>junit-platform-suite</artifactId>
-            <version>1.11.0-M1</version>
+            <version>6.1.0-M1</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-launcher</artifactId>
+            <version>6.1.0-M1</version>
+            <scope>test</scope>
+        </dependency>
+
 
 
 
