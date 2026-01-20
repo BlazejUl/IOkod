@@ -18,9 +18,7 @@ public class ZmianaStanuCywilnego {
 		this.model = model;
 		this.stanCywilny = stanCywilny;
 		this.PESEL = PESEL;
-		this.wprowadzenieNrPESEL();
-		this.wprowadzenieStanuCywilnego();
-		model.zmianaStanuCywilnegoObywatela(this.PESEL, this.stanCywilny);
+		this.model.zmianaStanuCywilnegoObywatela(this.PESEL, this.stanCywilny);
 		this.wybórOpcji();
 		this.exitStrategy.wyjście();
 

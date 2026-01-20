@@ -3,10 +3,7 @@ package kontroler;
 
 import model.Model;
 
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 
 import java.util.ArrayList;
@@ -15,6 +12,7 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
 
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @DisplayName("test klasy ZmianaDanychOsobowych")
 public class TestZmianaDanychOsobowych {
 
