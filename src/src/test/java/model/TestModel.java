@@ -1,14 +1,8 @@
 package model;
 
-
-import kontroler.WydanieNrPESEL;
 import org.junit.jupiter.api.*;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-
 import java.util.ArrayList;
 import static org.mockito.Mockito.*;
-import static org.mockito.MockitoAnnotations.openMocks;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @DisplayName("testy klasy model")

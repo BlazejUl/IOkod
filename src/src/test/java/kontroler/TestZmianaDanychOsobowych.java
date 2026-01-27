@@ -2,14 +2,8 @@ package kontroler;
 
 
 import model.Model;
-
 import org.junit.jupiter.api.*;
-
-
 import java.util.ArrayList;
-
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
