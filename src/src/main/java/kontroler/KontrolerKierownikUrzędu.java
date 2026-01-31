@@ -50,7 +50,7 @@ public class KontrolerKierownikUrzędu implements IKontrolerKierownikUrzędu {
 	}
 
 	public void zmianaDanychUrodzeniaPłci() {
-		ZmianaDanychUrodzeniaPłci pu05 = new ZmianaDanychUrodzeniaPłci(model);
+		ZmianaDanychUrodzeniaPłci pu05 = new ZmianaDanychUrodzeniaPłci(model,"21:12:2012","M",123);
 
 	}
 

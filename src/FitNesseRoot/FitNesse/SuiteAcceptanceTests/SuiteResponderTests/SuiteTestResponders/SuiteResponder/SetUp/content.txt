@@ -1,0 +1,3 @@
+!include -c <SuiteAcceptanceTests.testyfitnesse.SetUp
+
+!define VariableUsedInTest {foo}

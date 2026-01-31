@@ -1,0 +1,5 @@
+!|script|
+|given page|ParentPage|
+|given page|ParentPage.ChildPage|with content|>testyfitnesse.SetUp|
+|given page|ParentPage.ChildPage.testyfitnesse.SetUp|
+|page|ParentPage.ChildPage|should have link to|ParentPage.ChildPage.testyfitnesse.SetUp|
