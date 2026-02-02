@@ -1,0 +1,9 @@
+---
+Suite
+---
+!1 Test suite ${PAGE_NAME}
+!contents -R2 -g -p -f -h
+
+"testy akceptacyjne systemu zarządzania urzędem"
+
+!path C:\Users\blaze\Desktop\IO code\src\target\test-classes\
